@@ -100,14 +100,26 @@ export class MemStorage implements IStorage {
   
   async getRecentStories(limit: number): Promise<Story[]> {
     return Array.from(this.stories.values())
-      .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+      .sort((a, b) => {
+        // Handle null createdAt safely
+        const dateA = a.createdAt ? new Date(a.createdAt).getTime() : 0;
+        const dateB = b.createdAt ? new Date(b.createdAt).getTime() : 0;
+        return dateB - dateA;
+      })
       .slice(0, limit);
   }
   
   async createStory(insertStory: InsertStory): Promise<Story> {
     const id = this.storyCurrentId++;
     const now = new Date();
-    const story: Story = { ...insertStory, id, createdAt: now };
+    // Make sure isFeatured and rating are not undefined to match the Story type
+    const story: Story = {
+      ...insertStory,
+      id,
+      createdAt: now,
+      isFeatured: insertStory.isFeatured ?? false,
+      rating: insertStory.rating ?? 0
+    };
     this.stories.set(id, story);
     return story;
   }
@@ -188,7 +200,7 @@ export class MemStorage implements IStorage {
                   <p>ركض الأرنب بأقصى سرعة، لكنه لم يستطع اللحاق بالسلحفاة التي عبرت خط النهاية وفازت بالسباق.</p>
                   <p>تعلم الأرنب درساً مهماً: المثابرة والعزيمة قد تتغلبان على المواهب الطبيعية إذا لم تُستغل بشكل صحيح.</p>`,
         summary: "قصة كلاسيكية عن سباق بين أرنب سريع ومغرور وسلحفاة بطيئة ولكن مثابرة.",
-        imageUrl: "https://images.unsplash.com/photo-1512546321483-c0468b7b8a95?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "https://images.unsplash.com/photo-1519064438923-d9dee5d40437?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         ageGroup: "6-8",
         readingTime: 10,
         theme: "حيوانات",
@@ -213,7 +225,7 @@ export class MemStorage implements IStorage {
                   <p>صرخت ليلى بصوت عالٍ، وسمعها حطاب كان يعمل قريباً، فهرع لمساعدتها وأنقذها من الذئب.</p>
                   <p>تعلمت ليلى درساً مهماً في ذلك اليوم: دائماً استمع لنصائح والديك، ولا تتحدث مع الغرباء.</p>`,
         summary: "مغامرة فتاة صغيرة في الغابة وما تعلمته من لقائها مع ذئب ماكر.",
-        imageUrl: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "https://images.unsplash.com/photo-1608107363352-a478674ebfb8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         ageGroup: "3-5",
         readingTime: 8,
         theme: "مغامرات",
@@ -235,7 +247,7 @@ export class MemStorage implements IStorage {
                   <p>وأخيراً، أدرك علاء الدين أن قوته الحقيقية ليست في المصباح السحري، بل في شجاعته وذكائه.</p>
                   <p>وعاش علاء الدين والأميرة ياسمين في سعادة، واستخدما ثروتهما لمساعدة الفقراء في المملكة.</p>`,
         summary: "قصة شاب فقير يعثر على مصباح سحري يغير حياته إلى الأبد.",
-        imageUrl: "https://images.unsplash.com/photo-1568776274463-6c615307e398?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "https://images.unsplash.com/photo-1528696892704-5e1122852276?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         ageGroup: "9-11",
         readingTime: 15,
         theme: "خيال علمي",
@@ -328,7 +340,7 @@ export class MemStorage implements IStorage {
                   <p>بعد الزيارة، عادت سارة إلى المنزل مليئة بالإلهام والحماس. وضعت خطة لمستقبلها: دراسة الهندسة الفضائية، والتدرب بجد لتصبح رائدة فضاء.</p>
                   <p>وبدأت تكتب في دفترها: "رحلتي إلى الفضاء: الفصل الأول..."</p>`,
         summary: "مغامرة علمية مثيرة لطفلة تحلم بأن تصبح رائدة فضاء",
-        imageUrl: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "https://images.unsplash.com/photo-1534996858221-380b92700493?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         ageGroup: "12+",
         readingTime: 18,
         theme: "خيال علمي",
