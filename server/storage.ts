@@ -268,7 +268,7 @@ export class MemStorage implements IStorage {
                   <p>منذ ذلك اليوم، أصبح توتو بطلاً في الغابة، وتعلم درساً مهماً: أحياناً ما نعتبره نقصاً قد يكون في الحقيقة ميزة خاصة.</p>
                   <p>وعاش توتو سعيداً مع أصدقائه الجدد، فخوراً بخرطومه القصير.</p>`,
         summary: "قصة فيل صغير يتعلم أهمية الصداقة في الغابة",
-        imageUrl: "https://images.unsplash.com/photo-1595123550441-d377e017de6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "/elephant.png",
         ageGroup: "3-5",
         readingTime: 5,
         theme: "حيوانات",
