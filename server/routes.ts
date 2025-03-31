@@ -17,25 +17,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
   
-  // Get a single story by ID
-  app.get(`${apiPrefix}/stories/:id`, async (req, res) => {
-    try {
-      const id = parseInt(req.params.id);
-      if (isNaN(id)) {
-        return res.status(400).json({ error: "Invalid story ID" });
-      }
-      
-      const story = await storage.getStoryById(id);
-      if (!story) {
-        return res.status(404).json({ error: "Story not found" });
-      }
-      
-      res.json(story);
-    } catch (error) {
-      res.status(500).json({ error: "Failed to fetch story" });
-    }
-  });
-  
   // Get featured stories
   app.get(`${apiPrefix}/stories/featured`, async (req, res) => {
     try {
@@ -76,6 +57,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
       res.json(recentStories);
     } catch (error) {
       res.status(500).json({ error: "Failed to fetch recent stories" });
+    }
+  });
+  
+  // Get a single story by ID - Moved after specific routes to avoid conflicts
+  app.get(`${apiPrefix}/stories/:id`, async (req, res) => {
+    try {
+      const id = parseInt(req.params.id);
+      if (isNaN(id)) {
+        return res.status(400).json({ error: "Invalid story ID" });
+      }
+      
+      const story = await storage.getStoryById(id);
+      if (!story) {
+        return res.status(404).json({ error: "Story not found" });
+      }
+      
+      res.json(story);
+    } catch (error) {
+      res.status(500).json({ error: "Failed to fetch story" });
     }
   });
   
