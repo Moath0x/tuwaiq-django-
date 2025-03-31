@@ -247,7 +247,7 @@ export class MemStorage implements IStorage {
                   <p>وأخيراً، أدرك علاء الدين أن قوته الحقيقية ليست في المصباح السحري، بل في شجاعته وذكائه.</p>
                   <p>وعاش علاء الدين والأميرة ياسمين في سعادة، واستخدما ثروتهما لمساعدة الفقراء في المملكة.</p>`,
         summary: "قصة شاب فقير يعثر على مصباح سحري يغير حياته إلى الأبد.",
-        imageUrl: "https://cdn-icons-png.flaticon.com/512/6543/6543210.png",
+        imageUrl: "/aladdin.png",
         ageGroup: "9-11",
         readingTime: 15,
         theme: "خيال علمي",
