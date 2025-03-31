@@ -200,7 +200,7 @@ export class MemStorage implements IStorage {
                   <p>ركض الأرنب بأقصى سرعة، لكنه لم يستطع اللحاق بالسلحفاة التي عبرت خط النهاية وفازت بالسباق.</p>
                   <p>تعلم الأرنب درساً مهماً: المثابرة والعزيمة قد تتغلبان على المواهب الطبيعية إذا لم تُستغل بشكل صحيح.</p>`,
         summary: "قصة كلاسيكية عن سباق بين أرنب سريع ومغرور وسلحفاة بطيئة ولكن مثابرة.",
-        imageUrl: "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "https://img.freepik.com/premium-vector/cute-turtle-rabbit-race-cartoon-illustration_42750-580.jpg",
         ageGroup: "6-8",
         readingTime: 10,
         theme: "حيوانات",
@@ -225,7 +225,7 @@ export class MemStorage implements IStorage {
                   <p>صرخت ليلى بصوت عالٍ، وسمعها حطاب كان يعمل قريباً، فهرع لمساعدتها وأنقذها من الذئب.</p>
                   <p>تعلمت ليلى درساً مهماً في ذلك اليوم: دائماً استمع لنصائح والديك، ولا تتحدث مع الغرباء.</p>`,
         summary: "مغامرة فتاة صغيرة في الغابة وما تعلمته من لقائها مع ذئب ماكر.",
-        imageUrl: "https://images.unsplash.com/photo-1504517319533-8e0ad8153ba7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "https://img.freepik.com/premium-vector/little-red-riding-hood-story-book-scene-vector-illustration_1639-39516.jpg",
         ageGroup: "3-5",
         readingTime: 8,
         theme: "مغامرات",
@@ -247,7 +247,7 @@ export class MemStorage implements IStorage {
                   <p>وأخيراً، أدرك علاء الدين أن قوته الحقيقية ليست في المصباح السحري، بل في شجاعته وذكائه.</p>
                   <p>وعاش علاء الدين والأميرة ياسمين في سعادة، واستخدما ثروتهما لمساعدة الفقراء في المملكة.</p>`,
         summary: "قصة شاب فقير يعثر على مصباح سحري يغير حياته إلى الأبد.",
-        imageUrl: "https://images.unsplash.com/photo-1528696892704-5e1122852276?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "https://img.freepik.com/premium-vector/cartoon-genie-magic-lamp-isolated-white_29190-7415.jpg",
         ageGroup: "9-11",
         readingTime: 15,
         theme: "خيال علمي",
@@ -340,7 +340,7 @@ export class MemStorage implements IStorage {
                   <p>بعد الزيارة، عادت سارة إلى المنزل مليئة بالإلهام والحماس. وضعت خطة لمستقبلها: دراسة الهندسة الفضائية، والتدرب بجد لتصبح رائدة فضاء.</p>
                   <p>وبدأت تكتب في دفترها: "رحلتي إلى الفضاء: الفصل الأول..."</p>`,
         summary: "مغامرة علمية مثيرة لطفلة تحلم بأن تصبح رائدة فضاء",
-        imageUrl: "https://images.unsplash.com/photo-1534996858221-380b92700493?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "https://img.freepik.com/premium-vector/space-background-with-stars-vector-illustration-universe-banner-planets-earth-mars-moon_619489-520.jpg",
         ageGroup: "12+",
         readingTime: 18,
         theme: "خيال علمي",
