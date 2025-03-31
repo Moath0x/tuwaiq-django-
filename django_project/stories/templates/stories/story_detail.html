@@ -1,0 +1,66 @@
+{% extends 'stories/base.html' %}
+
+{% block title %}{{ story.title }} - قصص عربية للأطفال{% endblock %}
+
+{% block content %}
+<div class="position-relative mb-5">
+    <!-- Cloud animations -->
+    <div class="cloud cloud-left" style="top: 50px;">
+        <svg width="150" height="80" viewBox="0 0 150 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M75 80C116.421 80 150 62.0914 150 40C150 17.9086 116.421 0 75 0C33.5786 0 0 17.9086 0 40C0 62.0914 33.5786 80 75 80Z" fill="#E1F5FE"/>
+        </svg>
+    </div>
+    <div class="cloud cloud-right" style="top: 80px;">
+        <svg width="120" height="60" viewBox="0 0 120 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M60 60C93.1371 60 120 46.5685 120 30C120 13.4315 93.1371 0 60 0C26.8629 0 0 13.4315 0 30C0 46.5685 26.8629 60 60 60Z" fill="#E1F5FE"/>
+        </svg>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <nav aria-label="breadcrumb" class="mb-4">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{% url 'stories:home' %}">الرئيسية</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">{{ story.title }}</li>
+                </ol>
+            </nav>
+            
+            <article class="card shadow border-0">
+                <img src="{{ story.image_url }}" class="card-img-top" alt="{{ story.title }}" style="max-height: 400px; object-fit: cover;">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div>
+                            <span class="badge bg-primary age-badge">{{ story.age_group }}</span>
+                            <span class="badge bg-secondary age-badge">{{ story.theme }}</span>
+                        </div>
+                        <small class="text-muted">{{ story.reading_time }} دقائق للقراءة</small>
+                    </div>
+                    
+                    <h1 class="card-title mb-3">{{ story.title }}</h1>
+                    
+                    <div class="mb-4">
+                        {% for i in "12345" %}
+                            {% if forloop.counter <= story.rating %}
+                                <span class="text-warning h4">★</span>
+                            {% else %}
+                                <span class="text-muted h4">★</span>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="card mb-4 bg-light">
+                        <div class="card-body">
+                            <h5 class="card-title">ملخص القصة</h5>
+                            <p class="card-text">{{ story.summary }}</p>
+                        </div>
+                    </div>
+                    
+                    <div class="story-content">
+                        {{ story.content|linebreaks }}
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>
+{% endblock %}
