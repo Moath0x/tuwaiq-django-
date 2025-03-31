@@ -61,8 +61,8 @@ const HeroSection: React.FC = () => {
                 duration: 5,
                 ease: "easeInOut" 
               }}
-              src="https://images.unsplash.com/photo-1511108690759-009324a90311?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-              alt="أطفال يقرأون" 
+              src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+              alt="طفل يقرأ كتاب خيالي" 
               className="rounded-2xl shadow-lg max-w-full h-auto" 
               width="450" 
               height="300" 
