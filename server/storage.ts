@@ -225,7 +225,7 @@ export class MemStorage implements IStorage {
                   <p>صرخت ليلى بصوت عالٍ، وسمعها حطاب كان يعمل قريباً، فهرع لمساعدتها وأنقذها من الذئب.</p>
                   <p>تعلمت ليلى درساً مهماً في ذلك اليوم: دائماً استمع لنصائح والديك، ولا تتحدث مع الغرباء.</p>`,
         summary: "مغامرة فتاة صغيرة في الغابة وما تعلمته من لقائها مع ذئب ماكر.",
-        imageUrl: "https://cdn-icons-png.flaticon.com/512/2589/2589903.png",
+        imageUrl: "/littlered.png",
         ageGroup: "3-5",
         readingTime: 8,
         theme: "مغامرات",
