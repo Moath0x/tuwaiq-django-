@@ -200,7 +200,7 @@ export class MemStorage implements IStorage {
                   <p>ركض الأرنب بأقصى سرعة، لكنه لم يستطع اللحاق بالسلحفاة التي عبرت خط النهاية وفازت بالسباق.</p>
                   <p>تعلم الأرنب درساً مهماً: المثابرة والعزيمة قد تتغلبان على المواهب الطبيعية إذا لم تُستغل بشكل صحيح.</p>`,
         summary: "قصة كلاسيكية عن سباق بين أرنب سريع ومغرور وسلحفاة بطيئة ولكن مثابرة.",
-        imageUrl: "https://images.unsplash.com/photo-1519064438923-d9dee5d40437?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "https://images.unsplash.com/photo-1551969014-7d2c4cddf0b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         ageGroup: "6-8",
         readingTime: 10,
         theme: "حيوانات",
@@ -225,7 +225,7 @@ export class MemStorage implements IStorage {
                   <p>صرخت ليلى بصوت عالٍ، وسمعها حطاب كان يعمل قريباً، فهرع لمساعدتها وأنقذها من الذئب.</p>
                   <p>تعلمت ليلى درساً مهماً في ذلك اليوم: دائماً استمع لنصائح والديك، ولا تتحدث مع الغرباء.</p>`,
         summary: "مغامرة فتاة صغيرة في الغابة وما تعلمته من لقائها مع ذئب ماكر.",
-        imageUrl: "https://images.unsplash.com/photo-1608107363352-a478674ebfb8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+        imageUrl: "https://images.unsplash.com/photo-1504517319533-8e0ad8153ba7?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
         ageGroup: "3-5",
         readingTime: 8,
         theme: "مغامرات",
