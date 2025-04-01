@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'stories.apps.StoriesConfig',
+    'arabic_stories',
     'corsheaders',
 ]
 
